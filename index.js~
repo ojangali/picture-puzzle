@@ -1,0 +1,14 @@
+'use strict';
+
+$(document).ready(init);
+
+var imageArray = [];
+
+function init(){
+  $('td').click(flip);
+}
+function flip(){
+  var randomGenerator = _.sample(imageArray);
+  $(this).css('background-image', 'url(' + randomGenerator + ' )');
+  
+}
